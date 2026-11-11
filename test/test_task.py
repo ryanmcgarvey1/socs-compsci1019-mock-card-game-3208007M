@@ -26,7 +26,13 @@ class test_task(unittest.TestCase):
 
     def test_get_integer_max_attempts(self):
         #Sub-task 3 – Mock Console Input With Built In
+        mock = Mock()
+        get_string = mock.return_value("abc")
+        result = get_integer()
+        #self.assertEqual(result, -1)
+        print(result)
         pass
+        
 
     def test_get_csv_rows(self):
         #Sub-task 4 – Mock File Load
