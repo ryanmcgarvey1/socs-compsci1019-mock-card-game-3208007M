@@ -12,14 +12,17 @@ class test_task(unittest.TestCase):
         #Sub-task 1: Mock Console Input Integer
         mock = Mock()
         get_string = mock.return_value = "18"
-        print(get_string)
-        print(get_input_integer)
-        #self.assertEqual(get_input_integer, 18)
-        pass
+        result = get_input_integer
+        self.assertEqual(result, 18)
+        
 
     def test_get_game_info(self):
         #Sub-task 2 – Mock Console Game Info
-        pass
+        mock = Mock()
+        get_string = mock.side_effect("Derek", "3")
+        result = get_game_info
+        self.assertEqual(result, 3)
+        
 
     def test_get_integer_max_attempts(self):
         #Sub-task 3 – Mock Console Input With Built In
